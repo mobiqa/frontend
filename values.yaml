@@ -8,7 +8,7 @@ image:
   repository: public.ecr.aws/x6k5w0n6/frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "8.1.1"
+  tag: "8.1.2"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -37,8 +37,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
-  port: 8080
+  type: LoadBalancer
+  port: 80
 
 ingress:
   enabled: false
